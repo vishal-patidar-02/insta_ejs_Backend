@@ -1,0 +1,16 @@
+<%- include("IncludeHead.ejs"); %>
+<body>
+    <h1>This account Belong to the @<%=data.name%></h1>
+    <h2>Followers : <%=data.followers%></h2>
+    <h2>Following : <%=data.following%></h2>
+    <hr>
+    <%for(post of data.posts) { %>
+        <img src="<%=post.image%>" alt="image link">
+        <p>LIkes : <%=post.likes%></p>
+        <p>Comments : <%=post.comments%></p>
+        
+    <%}%>
+    <hr><hr><hr>
+    <%-include("IncludeFotter.ejs"); %>
+</body>
+</html>
